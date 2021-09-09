@@ -1,0 +1,24 @@
+.header {
+	color: var(--main-clr);
+	padding: 1rem;
+
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.covidContainer {
+	display: grid;
+	grid-template-columns: 1fr 5fr 2fr;
+	min-height: 100vh;
+}
+
+.covidContainer h2 {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+.covidContainer p {
+	font-size: 3rem;
+	font-weight: 900;
+}

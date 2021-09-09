@@ -1,0 +1,33 @@
+/* confirmed cases */
+.confirmedCases {
+	margin-top: 0.5rem;
+	flex: 1 1 400px;
+	background: var(--main-clr);
+	border-radius: var(--border-r);
+	color: #fff;
+}
+
+.confirmedCases h2 {
+	text-align: center;
+	padding: 1rem;
+	line-height: 1.2;
+}
+
+.countryCases {
+	margin-top: 1.5rem;
+	overflow: auto;
+}
+
+.countryCases li:first-child {
+	padding-top: 0;
+}
+
+.countryCases li {
+	padding: 0.5rem 1rem;
+}
+
+.countryCases li span {
+	color: #fff;
+	padding-right: 1rem;
+	font-weight: 700;
+}

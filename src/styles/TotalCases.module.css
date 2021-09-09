@@ -1,0 +1,40 @@
+.totalCases {
+	background: var(--container-bg);
+	padding: 0.5rem;
+	display: flex;
+	/* row-gap: 1rem; */
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.totalConfirmed {
+	text-align: center;
+	border-radius: var(--border-r);
+}
+
+.totalConfirmed:nth-child(2) {
+	margin-top: 1rem;
+}
+
+.totalConfirmed h2 {
+	letter-spacing: 0.3px;
+}
+
+/* time */
+.updated {
+	margin-top: 0.5rem;
+	padding: 0.5rem;
+	text-align: center;
+	background: var(--main-clr);
+	color: #fff;
+	border-radius: var(--border-r);
+}
+
+.updated h2 {
+	font-size: 1.2rem;
+}
+
+.updated p {
+	font-size: 1.6rem;
+	font-weight: 600;
+}

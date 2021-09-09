@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;900&display=swap');
+
+:root {
+	--border-r: 0.5rem;
+	--other-clr: #293745;
+	--main-clr: #242424;
+	--container-bg: #e8e8e8;
+
+	/* misc */
+	--recovered-clr: #32cd32;
+	--deaths-clr: #f7042e;
+	--vacinnated-clr: #007fff;
+	--active-clr: orange;
+	--today-cases-clr: #ffef00;
+	--today-recovered-clr: #9b870c;
+	--critical-cases-clr: #9d33ff;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	font-size: 1.4rem;
+	font-family: 'Poppins', sans-serif;
+	color: var(--main-clr);
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+.container {
+	width: 100%;
+	max-width: 1800px;
+	margin: 0 auto;
+}
+
+main {
+	/* background: #000; */
+	min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+	line-height: 1;
+}
+
+/* scrollbar */
+/* Works on Firefox */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: #727171;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #000;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #727171;
+	border-radius: 20px;
+	/* border: 3px solid orange; */
+}
