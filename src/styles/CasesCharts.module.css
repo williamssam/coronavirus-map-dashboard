@@ -1,43 +1,12 @@
 .charts {
-	/* min-height: 50%; */
+	width: 35rem;
+	/* height: fit-content; */
+	margin: 0 auto;
 	color: var(--main-clr);
 	border-radius: var(--border-r);
 
 	display: flex;
-	flex-direction: column;
 	align-items: center;
-	justify-content: space-between;
-}
-
-.chart {
-	background: #fff;
-	width: 100%;
-	height: 100%;
-	border-radius: var(--border-r);
-}
-
-.btnContainer {
-	background: var(--main-clr);
-	padding: 0.5rem 1.3rem;
-	width: 100%;
-	border-radius: var(--border-r);
-
-	display: flex;
-	gap: 2rem;
-	margin-top: 0.5rem;
-}
-
-.btnContainer button {
-	all: unset;
-	padding: 0.3rem 1.3rem;
-	background-color: var(--other-clr);
-	border-radius: var(--border-r);
-	color: #fff;
-	text-transform: lowercase;
-	cursor: pointer;
-}
-
-.btnContainer button:focus:not(:focus-visible) {
-	outline: none;
-	box-shadow: 0 0 0 2px var(--container-bg);
+	justify-content: center;
+	flex-direction: column;
 }

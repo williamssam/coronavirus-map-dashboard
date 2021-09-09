@@ -2,6 +2,7 @@ import styles from '../styles/OtherCases.module.css'
 import ActiveCases from './ActiveCases'
 import CasesCharts from './CasesCharts'
 import CriticalCases from './CriticalCases'
+import { useAxios } from 'use-axios-client'
 import TotalDeaths from './TotalDeaths'
 import TodayDeaths from './TodayDeaths'
 import TodayCases from './TodayCases'
@@ -10,6 +11,10 @@ import TodayRecovered from './TodayRecovered'
 import AffectedCountries from './AffectedCountries'
 
 const OtherCases = () => {
+	const { data } = useAxios({
+		url: 'https://disease.sh/v3/covid-19/vaccine/coverage?lastdays=1&fullData=true',
+	})
+
 	return (
 		<section className={styles.totalDeaths}>
 			<div className={styles.totalDeathsWrapper}>
@@ -19,9 +24,7 @@ const OtherCases = () => {
 				</article>
 
 				{/* total vaccination */}
-				<article>
-					<TotalVaccinated />
-				</article>
+				<article>{data && <TotalVaccinated data={data} />}</article>
 
 				<article>
 					<ActiveCases />
@@ -49,7 +52,7 @@ const OtherCases = () => {
 			</div>
 
 			{/* charts */}
-			<CasesCharts />
+			{data && <CasesCharts vaccinatedData={data} />}
 		</section>
 	)
 }

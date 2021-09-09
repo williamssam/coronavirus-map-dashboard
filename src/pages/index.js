@@ -2,10 +2,12 @@
 import { useAxios } from 'use-axios-client'
 import GlobalCases from '../components/GlobalCases'
 import { GlobalCasesContext } from '../Context/GlobalCasesContext'
+import { instance } from '../App'
 
 export const Homepage = () => {
 	const { data, error, loading } = useAxios({
-		url: 'https://disease.sh/v3/covid-19/all',
+		axiosInstance: instance,
+		url: '/all',
 	})
 
 	return (

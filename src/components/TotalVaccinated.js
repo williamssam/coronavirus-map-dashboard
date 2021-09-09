@@ -1,11 +1,15 @@
 import styles from '../styles/OtherCases.module.css'
 
-const TotalVaccinated = () => {
+const TotalVaccinated = ({ data }) => {
 	return (
 		<article>
 			<div className={styles.totalConfirmed}>
 				<h2>Total Vacinnated</h2>
-				<p style={{ color: 'var(--vacinnated-clr)' }}>687,404,658</p>
+				{data.map((item, index) => (
+					<p style={{ color: 'var(--vacinnated-clr)' }} key={index}>
+						{item.total.toLocaleString()}
+					</p>
+				))}
 			</div>
 		</article>
 	)
