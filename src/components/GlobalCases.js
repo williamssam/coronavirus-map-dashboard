@@ -6,7 +6,18 @@ import CovidMap from './CovidMap'
 const GlobalCases = () => {
 	return (
 		<main>
-			<header className={styles.header}>
+			<section className={styles.covidContainer}>
+				{/* total cases */}
+				<TotalCases />
+
+				{/* <Map /> */}
+				<CovidMap />
+
+				{/* other info */}
+				<OtherCases />
+			</section>
+
+			<footer className={styles.footer}>
 				<h1>Coronavirus (Covid-19) Map Dashboard</h1>
 
 				<p>
@@ -32,18 +43,7 @@ const GlobalCases = () => {
 						Github
 					</a>
 				</p>
-			</header>
-
-			<section className={styles.covidContainer}>
-				{/* total cases */}
-				<TotalCases />
-
-				{/* <Map /> */}
-				<CovidMap />
-
-				{/* other info */}
-				<OtherCases />
-			</section>
+			</footer>
 		</main>
 	)
 }

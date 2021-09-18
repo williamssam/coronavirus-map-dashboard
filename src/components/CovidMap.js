@@ -10,13 +10,11 @@ const CovidMap = () => {
 		url: '/countries',
 	})
 
-	console.log(data)
-
 	return (
 		<MapContainer
 			center={[9.082, 8.6753]}
 			zoom={3}
-			scrollWheelZoom={true}
+			scrollWheelZoom={false}
 			placeholder={<h1 style={{ color: '#000' }}>loading...</h1>}>
 			<TileLayer
 				attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -45,7 +43,8 @@ const CovidMap = () => {
 
 								<ul>
 									<li>
-										<strong>Confirmed:</strong> {item.cases}
+										<strong>Confirmed:</strong>{' '}
+										{item.cases.toLocaleString()}
 									</li>
 									<li>
 										<strong>Deaths:</strong>{' '}
