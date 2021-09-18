@@ -1,8 +1,8 @@
 # Coronvirus Update App - check Global Coronavirus updates
 
-My goal was to create an app to check Global Coronavirus cases with maps and graph
+My goal was to create an app to check Global Coronavirus cases with maps and chart
 
-<!-- ![](screenshot.png) -->
+![](screenshot.png)
 
 ## Getting Started
 
@@ -20,12 +20,14 @@ NB: Install "yarn" if you have not, using
 ## Libraries Used
 
 -   Axios
--   use-axios-client
+-   use-axios-client - an axios library to fetch data
+-   react-leaflet - A react wrapper for leaflet.js
 
 ## How I worked on this project
 
 -   I used 'css modules' for styling
 -   Used 'use-axios-client' an axios library, to handle HTTP requests.
+-   I made use of 'leaflet.js' map to display the map
 
 ## How to navigate this project
 
@@ -37,3 +39,18 @@ NB: Install "yarn" if you have not, using
 
 -   The application fetches Real Time Coronavirus cases data data from the [diseases api](https://disease.sh/docs/#/)
 -   I used 'use-axios-client', an Axios library which make HTTP request and handling error easier. This helped me get to know how Axios work and how to use it.
+-   I used 'react-leaflet' to load the leaflet map
+
+## Challenges
+
+-   I had challenges with displaying the map. The compiler was unable to compile the libary 'react-leaflet' code because it was using nullish coalescing (??). I solved this challenge by editing my package.json and putting:
+
+```json
+   "browserslist": [
+		">0.2%",
+		"not dead",
+		"not op_mini all"
+	]
+```
+
+and deleting the ".cache" folder in node_modules, then restarting the server.

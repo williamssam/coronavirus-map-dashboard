@@ -3,8 +3,8 @@
 :root {
 	--border-r: 0.5rem;
 	--other-clr: #293745;
-	--main-clr: #242424;
-	--container-bg: #e8e8e8;
+	--main-clr: #141414;
+	--container-bg: rgba(31, 31, 31, 0.75);
 
 	/* misc */
 	--recovered-clr: #32cd32;
@@ -29,7 +29,7 @@ html {
 body {
 	font-size: 1.4rem;
 	font-family: 'Poppins', sans-serif;
-	color: var(--main-clr);
+	color: #fff;
 }
 
 a {

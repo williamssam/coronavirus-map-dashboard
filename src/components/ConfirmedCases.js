@@ -19,10 +19,10 @@ const ConfirmedCases = () => {
 						.sort((a, b) => b.cases - a.cases)
 						.map((item, index) => (
 							<li key={index}>
-								<a href='#'>
+								<article>
 									<span>{item.cases.toLocaleString()}</span>{' '}
 									{item.country}
-								</a>
+								</article>
 							</li>
 						))}
 			</ul>

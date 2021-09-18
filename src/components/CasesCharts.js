@@ -1,26 +1,30 @@
 import { useContext } from 'react'
 import styles from '../styles/CasesCharts.module.css'
-import { Pie } from 'react-chartjs-2'
+import { Doughnut } from 'react-chartjs-2'
 import { GlobalCasesContext } from '../Context/GlobalCasesContext'
 
-const CovidCharts = ({ vaccinatedData }) => {
-	console.log(vaccinatedData)
-
-	const vaccine = vaccinatedData.map((item) => {
-		return item.total
-	})
-
-	// console.log(vaccine)
-
+const CovidCharts = () => {
 	const data = useContext(GlobalCasesContext)
 
+	console.log(data)
+
 	const details = {
-		labels: ['Cases', 'Deaths', 'Recovered', 'Vaccinated'],
+		labels: ['Cases', 'Deaths', 'Recovered', 'Active Case'],
 		datasets: [
 			{
-				label: 'My First Dataset',
-				data: [data.cases, data.deaths, data.recovered, vaccine],
-				backgroundColor: ['#242424', '#f7042e', '#32cd32', '#007fff'],
+				data: [data.cases, data.deaths, data.recovered, data.active],
+				backgroundColor: [
+					'rgb(36, 36, 36, 0.9)',
+					'rgb(247, 4, 46, 0.9)',
+					'rgb(50, 205, 50, 0.9)',
+					'rgb(255, 69, 0, 0.9)',
+				],
+				borderColor: [
+					'rgb(36, 36, 36)',
+					'rgb(247, 4, 46)',
+					'rgb(50, 205, 50)',
+					'rgb(255, 69, 0)',
+				],
 				hoverOffset: 4,
 			},
 		],
@@ -28,7 +32,7 @@ const CovidCharts = ({ vaccinatedData }) => {
 
 	return (
 		<div className={styles.charts}>
-			<Pie data={details} />
+			<Doughnut data={details} />
 
 			<h2>Global Covid cases chart</h2>
 		</div>

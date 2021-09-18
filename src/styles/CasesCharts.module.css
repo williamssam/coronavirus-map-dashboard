@@ -1,8 +1,8 @@
 .charts {
 	width: 35rem;
-	/* height: fit-content; */
-	margin: 0 auto;
+	background: #fff;
 	color: var(--main-clr);
+	margin: 0 auto;
 	border-radius: var(--border-r);
 
 	display: flex;

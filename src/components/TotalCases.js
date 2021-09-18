@@ -2,20 +2,10 @@ import { useContext } from 'react'
 import styles from '../styles/TotalCases.module.css'
 import ConfirmedCases from './ConfirmedCases'
 import { GlobalCasesContext } from '../Context/GlobalCasesContext'
+import { getDateName } from '../utilities/getDateName'
 
 const TotalCases = () => {
 	const data = useContext(GlobalCasesContext)
-
-	const getDateName = () => {
-		const updatedDate = new Date(data.updated)
-		const time = updatedDate.toLocaleString('default', {
-			dateStyle: 'short',
-			timeStyle: 'medium',
-			hour12: true,
-		})
-
-		return time
-	}
 
 	return (
 		<section className={styles.totalCases}>
@@ -36,7 +26,7 @@ const TotalCases = () => {
 
 			<div className={styles.updated}>
 				<h2>Last Updated at (M/D/YYY)</h2>
-				<p>{getDateName().toUpperCase()}</p>
+				<p>{getDateName(data.updated).toUpperCase()}</p>
 			</div>
 		</section>
 	)

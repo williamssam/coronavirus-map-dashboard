@@ -1,0 +1,25 @@
+.popup {
+	width: 100%;
+	padding: 0.5rem;
+}
+.popup img {
+	width: 30%;
+}
+
+.popup header {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.popup ul {
+	padding-top: 2rem;
+}
+
+.popup li {
+	font-size: 1.3rem;
+}
+
+.popup li:not(:first-of-type) {
+	padding-top: 0.5rem;
+}
