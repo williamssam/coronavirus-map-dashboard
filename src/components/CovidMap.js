@@ -4,6 +4,9 @@ import { instance } from '../App'
 import { useAxios } from 'use-axios-client'
 import { getDateName } from '../utilities/getDateName'
 
+const apiKey = process.env.REACT_APP_MAP_API_KEY
+console.log(apiKey)
+
 const CovidMap = () => {
 	const { data } = useAxios({
 		axiosInstance: instance,
@@ -20,7 +23,7 @@ const CovidMap = () => {
 				attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 				// for light theme
 				// url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-				url='https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
+				url={`https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png?api_key=${apiKey}`}
 			/>
 
 			{data &&
