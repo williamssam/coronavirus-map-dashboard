@@ -1,4 +1,4 @@
-# Coronvirus Update App - check Global Coronavirus updates
+# Coronvirus Map Dashboard
 
 My goal was to create an app to check Global Coronavirus cases with maps and chart
 
@@ -54,3 +54,6 @@ NB: Install "yarn" if you have not, using
 ```
 
 and deleting the ".cache" folder in node_modules, then restarting the server.
+
+## Author
+- [Williams Samuel](https://williamssam.netlify.app/)
